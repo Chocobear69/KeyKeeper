@@ -17,5 +17,5 @@ from django.urls import path
 from keeper.views import *
 
 urlpatterns = [
-    path('', ),
+    path('', SecretListView.as_view()),
 ]
