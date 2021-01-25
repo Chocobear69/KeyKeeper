@@ -1,1 +1,20 @@
 {% extends 'keeper/base.html' %}
+
+{% block title %}
+    Home page
+{% endblock %}
+
+{% block content %}
+    {% for secret in secrets %}
+        <div class="card mt-5">
+            <div class="card-header">
+                {{ secret.service }}
+            </div>
+            <div class="card-body">
+                <p class="card-text">Login: {{ secret.login }}</p>
+                <p class="card-text">Password: {{ secret.password }}</p>
+                <p class="card-text"><small class="text-muted"> - last update {{ secret.update_date }}</small></p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
