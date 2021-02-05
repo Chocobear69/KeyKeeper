@@ -1,0 +1,13 @@
+{% extends 'keeper/base.html' %}
+
+{% block title %}
+    Edit Secret
+{% endblock %}
+
+{% block content %}
+    <form action="/edit/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}

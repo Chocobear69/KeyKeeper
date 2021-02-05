@@ -18,4 +18,5 @@ from keeper.views import *
 
 urlpatterns = [
     path('', SecretListView.as_view()),
+    path('edit/', SecretEditView.as_view())
 ]

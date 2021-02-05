@@ -1,3 +1,3 @@
 python manage.py migrate
 python manage.py collectstatic
-waittress-serve --host=0.0.0.0 --port=8080 --threads=64 --backlog=1000
+gunicorn key_keeper.wsgi:application --bind=0.0.0.0:8080 --worker=6
